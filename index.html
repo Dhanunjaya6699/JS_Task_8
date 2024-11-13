@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_7</title>
+</head>
+
+<body>
+    <script>
+        // income tax problem
+        var userIncome = Number(prompt("Enter your Annual Income : "));
+
+        if (userIncome <= 250000) {
+            console.log("No need to pay income tax")
+        } else if (userIncome > 250000 && userIncome <= 500000) {
+            console.log("You have to pay your income tax amount : " + (userIncome * (5 / 100)))
+        } else if (userIncome > 500000 && userIncome <= 1000000) {
+            console.log("You have to pay your income tax amount : " + (12500 + (userIncome * (20 / 100))))
+        } else if (userIncome > 1000000) {
+            console.log("You have to pay your income tax amount : " + (112500 + (userIncome * (30 / 100))))
+        } else {
+            console.log("Enter your Anuual Income properly")
+        }
+
+
+        // shipping cost for parcel
+        var weight = Number(prompt("Enter your parcel weight : "));
+
+        if (weight <= 1) {
+            var destination = prompt("Enter your parcel destination : ").toLowerCase();
+
+            if (destination == "local") { console.log("Shipping cost for your local parcel is : $5") }
+            else if (destination == "national") { console.log("Shipping cost for your national parcel is : $8") }
+            else if (destination == "international") { console.log("Shipping cost for your international parcel is : $15") }
+            else { console.log("**Enter the proper destination") }
+        }
+        else if (weight > 1 && weight <= 5) {
+            var destination = prompt("Enter your parcel destination : ").toLowerCase();
+
+            if (destination == "local") { console.log("Shipping cost for your local parcel is : $10") }
+            else if (destination == "national") { console.log("Shipping cost for your national parcel is : $15") }
+            else if (destination == "international") { console.log("Shipping cost for your international parcel is : $30") }
+            else { console.log("**Enter the proper destination") }
+        }
+        else if (weight > 5 && weight <= 10) {
+            var destination = prompt("Enter your parcel destination : ").toLowerCase();
+
+            if (destination == "local") { console.log("Shipping cost for your local parcel is : $20") }
+            else if (destination == "national") { console.log("Shipping cost for your national parcel is : $25") }
+            else if (destination == "international") { console.log("Shipping cost for your international parcel is : $50") }
+            else { console.log("**Enter the proper destination") }
+        }
+        else if (weight > 10) {
+            var destination = prompt("Enter your parcel destination : ").toLowerCase();
+
+            if (destination == "local") { console.log("Shipping cost for your local parcel is : $30") }
+            else if (destination == "national") { console.log("Shipping cost for your national parcel is : $35") }
+            else if (destination == "international") { console.log("Shipping cost for your international parcel is : $70") }
+            else { console.log("**Enter the proper destination") }
+        }
+        else {
+            console.log("**Enter your parcel weight properly")
+        }
+
+        
+        // electricity bill based on units
+        var totalUnits = Number(prompt("Enter your total elctricy units : "))
+
+        if (totalUnits <= 100) {
+            console.log("Your total electricity bill is = " + (totalUnits * 1))
+        }
+        else if (totalUnits > 100 && totalUnits <= 300) {
+            console.log("Your total electricity bill is = " + ((((totalUnits * 0) + 100) * 1) + ((totalUnits - 100) * 1.5)))
+        }
+        else if (totalUnits > 300) {
+            console.log("Your total electricity bill is = " + ((((totalUnits * 0) + 100) * 1) + (((totalUnits * 0) + 200) * 1.5) + ((totalUnits - 300) * 2)))
+        }
+        else { console.log("Enter your proper units") }
+
+    </script>
+</body>
+
+</html>
